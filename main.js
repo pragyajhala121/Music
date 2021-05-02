@@ -42,8 +42,6 @@ function draw(){
 	}
 	if(score_rightWrist > 0.2)
 	{
-		fill("#ff0090");
-	  stroke("#FF0000");
 		circle(rightWristX,rightWristY,20);
         
 		song2_status = song2.isPlaying();
@@ -66,7 +64,7 @@ function gotPoses(results)
 	console.log(results);
   score_leftWrist = results[0].pose.keypoints[9].score;
   console.log("score is Left Wrist = " + score_leftWrist);
-  score_leftWrist = results[0].pose.keypoints[10].score;
+  score_rightWrist = results[0].pose.keypoints[10].score;
   console.log("score is Right Wrist = " + score_rightWrist);
 	rightWristX = results[0].pose.rightWrist.x;
 	rightWristY = results[0].pose.rightWrist.y;
